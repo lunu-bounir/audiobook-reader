@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audiobook Reader</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#e7fff9"/>
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#202124" />
+  <link rel="icon" sizes="16x16" href="icons/16.png">
+  <link rel="icon" sizes="32x32" href="icons/32.png">
+  <link rel="icon" sizes="512x512" href="icons/512.png">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body data-sidebar="false">
+  <sidebar-view id="sidebar"></sidebar-view>
+  <div id="body">
+    <player-view id="player">
+      <div id="buttons">
+        <input type="button" id="show-sidebar">
+      </div>
+    </player-view>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="dependencies/sortable/Sortable.js"></script>
+  <script type="text/javascript" src="components/book-view/core.js"></script>
+  <script type="text/javascript" src="components/sidebar-view/core.js"></script>
+  <script type="text/javascript" src="components/player-view/core.js"></script>
+  <script type="text/javascript" src="navigate.js"></script>
+  <script type="text/javascript" src="sidebar.js"></script>
+  <script type="text/javascript" src="launch.js"></script>
+</body>
+</html>

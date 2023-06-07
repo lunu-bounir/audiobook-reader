@@ -1,0 +1,28 @@
+{
+  "name": "Audiobook Reader",
+  "description": "This extension is designed specially for playing audio books",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "offline_enabled": true,
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "icons": {
+    "16": "data/window/icons/16.png",
+    "32": "data/window/icons/32.png",
+    "48": "data/window/icons/48.png",
+    "64": "data/window/icons/64.png",
+    "128": "data/window/icons/128.png",
+    "256": "data/window/icons/256.png",
+    "512": "data/window/icons/512.png",
+    "1024": "data/window/icons/1024.png"
+  },
+  "action": {},
+  "commands": {
+    "_execute_action": {}
+  }
+}

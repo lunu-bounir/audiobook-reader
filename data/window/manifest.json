@@ -1,0 +1,52 @@
+{
+  "name": "Audiobook Reader",
+  "short_name": "Audiobook Reader",
+  "description": "Free and open-source audiobook player",
+  "categories": ["music", "utilities", "productivity"],
+  "icons": [{
+    "src": "icons/512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "icons/1024.png",
+    "sizes": "1024x1024",
+    "type": "image/png"
+  }],
+  "screenshots": [{
+    "src": "screenshots/one.png",
+    "type": "image/png",
+    "sizes": "540x720",
+    "form_factor": "narrow"
+  }],
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#202124",
+  "share_target": {
+    "action": "/index.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [{
+        "name": "file",
+        "accept": ["audio/*", "video/*"]
+      }]
+    }
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "file_handlers": [{
+    "action": "/index.html",
+    "accept": {
+      "video/*": [".flv", ".mp4", ".ts", ".3gp", ".3g2", ".mov", ".avi", ".wmv", ".mpeg", ".ogv", ".weba"],
+      "audio/*": [".aac", ".oga", ".ogm", ".mid", ".midi", ".mp3", ".aif", ".ram", ".wav", ".opus", ".webm"]
+    },
+    "icons": [{
+      "src": "icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+    "launch_type": "single-client"
+  }]
+}
