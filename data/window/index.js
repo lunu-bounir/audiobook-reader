@@ -9,9 +9,3 @@ sidebar.addEventListener('change', e => {
 player.addEventListener('done', () => {
   document.getElementById('show-sidebar').click();
 });
-
-window.onload = () => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js');
-  }
-};

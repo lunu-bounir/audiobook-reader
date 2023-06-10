@@ -19,11 +19,11 @@
     "form_factor": "narrow"
   }],
   "lang": "en-US",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#202124",
   "share_target": {
-    "action": "/index.html",
+    "action": "index.html",
     "method": "POST",
     "enctype": "multipart/form-data",
     "params": {
@@ -37,7 +37,7 @@
     "client_mode": "focus-existing"
   },
   "file_handlers": [{
-    "action": "/index.html",
+    "action": "index.html",
     "accept": {
       "video/*": [".flv", ".mp4", ".ts", ".3gp", ".3g2", ".mov", ".avi", ".wmv", ".mpeg", ".ogv", ".weba"],
       "audio/*": [".aac", ".oga", ".ogm", ".mid", ".midi", ".mp3", ".aif", ".ram", ".wav", ".opus", ".webm"]
