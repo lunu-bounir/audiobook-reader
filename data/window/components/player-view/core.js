@@ -509,9 +509,11 @@ class PlayerView extends HTMLElement {
         await audio.play();
       }
       if ('mediaSession' in navigator) {
-        navigator.mediaSession.metadata = new MediaMetadata({
-          title: this.#book,
-          artwork: [
+        const o = {
+          title: this.#book
+        };
+        if (location.href.startsWith('http')) {
+          o.artwork = [
             {src: 'icons/16.png', sizes: '16x16', type: 'image/png'},
             {src: 'icons/24.png', sizes: '24x24', type: 'image/png'},
             {src: 'icons/32.png', sizes: '32x32', type: 'image/png'},
@@ -520,8 +522,10 @@ class PlayerView extends HTMLElement {
             {src: 'icons/256.png', sizes: '256x256', type: 'image/png'},
             {src: 'icons/512.png', sizes: '512x512', type: 'image/png'},
             {src: 'icons/icon.svg', type: 'image/svg'}
-          ]
-        });
+          ];
+        }
+
+        navigator.mediaSession.metadata = new MediaMetadata(o);
         navigator.mediaSession.setActionHandler('play', () => audio.play());
         navigator.mediaSession.setActionHandler('pause', () => audio.pause());
         navigator.mediaSession.setActionHandler('stop', () => audio.pause());

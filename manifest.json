@@ -3,6 +3,7 @@
   "description": "This extension is designed specially for playing audio books",
   "version": "0.1.0",
   "manifest_version": 3,
+  "homepage_url": "https://webextension.org/listing/audiobook-reader.html",
   "permissions": [
     "storage",
     "unlimitedStorage"

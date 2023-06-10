@@ -21,11 +21,14 @@ const filesToCache = [
 
 /* Start the service worker and cache all of the app's content */
 self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(NAME).then(cache => {
-      return cache.addAll(filesToCache);
-    })
-  );
+  if (location.href.startsWith('http')) {
+    e.waitUntil(
+      caches.open(NAME).then(cache => {
+        return cache.addAll(filesToCache);
+      })
+    );
+  }
+
   self.skipWaiting();
 });
 
